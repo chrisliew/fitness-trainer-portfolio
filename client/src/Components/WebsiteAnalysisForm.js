@@ -39,7 +39,6 @@ class WebsiteAnalysisForm extends React.Component {
   };
 
   handleOnSubmit = () => {
-    console.log('sup');
     const clientInfo = {
       name: this.state.name,
       email: this.state.email,
@@ -52,6 +51,7 @@ class WebsiteAnalysisForm extends React.Component {
   };
 
   render() {
+    console.log(this.state.email);
     return (
       <div className='website-analysis-form-container'>
         <Button color='danger' onClick={this.toggle}>
@@ -67,6 +67,7 @@ class WebsiteAnalysisForm extends React.Component {
           </ModalHeader>
 
           <Form
+            ref='form'
             onSubmit={this.handleOnSubmit}
             className='website-analysis-form'
           >
@@ -80,9 +81,10 @@ class WebsiteAnalysisForm extends React.Component {
                 <b>Website URL *</b>
               </Label>
               <Input
-                type='url'
+                // type='url'
                 name='url'
                 id='website-url'
+                value={this.state.url}
                 placeholder='eg. www.example.com'
                 onChange={this.handleOnChange}
               />
@@ -95,6 +97,7 @@ class WebsiteAnalysisForm extends React.Component {
                 type='email'
                 name='email'
                 id='email'
+                value={this.state.email}
                 placeholder='Free report will be sent to this email'
                 onChange={this.handleOnChange}
               />
@@ -124,7 +127,11 @@ class WebsiteAnalysisForm extends React.Component {
               />
             </FormGroup>
             <ModalFooter>
-              <Button type='submit' color='primary' onClick={this.toggle}>
+              <Button
+                type='submit'
+                color='primary'
+                onClick={this.toggleValidateEmail}
+              >
                 Submit
               </Button>{' '}
               <Button color='secondary' onClick={this.toggle}>
