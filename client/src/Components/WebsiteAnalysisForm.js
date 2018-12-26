@@ -27,7 +27,11 @@ class WebsiteAnalysisForm extends React.Component {
 
   toggle() {
     this.setState({
-      modal: !this.state.modal
+      modal: !this.state.modal,
+      email: '',
+      name: '',
+      url: '',
+      phone: ''
     });
   }
 
@@ -45,13 +49,18 @@ class WebsiteAnalysisForm extends React.Component {
       url: this.state.url,
       phone: this.state.phone
     };
-    axios.post('/api/email/website', clientInfo).then(res => {
-      console.log('REZZZ', res);
-    });
+    axios
+      .post('/api/email/website', clientInfo)
+      .then(console.log('Website Analysis Request Form Sent'))
+      .catch(error => {
+        return error;
+      });
+    alert(
+      'Thanks For submitting your info, someone from FitnessTrainerGains will be in touch.'
+    );
   };
 
   render() {
-    console.log(this.state.email);
     return (
       <div className='website-analysis-form-container'>
         <Button color='danger' onClick={this.toggle}>
@@ -70,6 +79,7 @@ class WebsiteAnalysisForm extends React.Component {
             ref='form'
             onSubmit={this.handleOnSubmit}
             className='website-analysis-form'
+            autoComplete='off'
           >
             <div className='description'>
               We will go through your website and provide you with actionable
@@ -81,12 +91,11 @@ class WebsiteAnalysisForm extends React.Component {
                 <b>Website URL *</b>
               </Label>
               <Input
-                // type='url'
                 name='url'
                 id='website-url'
+                onChange={this.handleOnChange}
                 value={this.state.url}
                 placeholder='eg. www.example.com'
-                onChange={this.handleOnChange}
               />
             </FormGroup>
             <FormGroup>
@@ -97,9 +106,9 @@ class WebsiteAnalysisForm extends React.Component {
                 type='email'
                 name='email'
                 id='email'
+                onChange={this.handleOnChange}
                 value={this.state.email}
                 placeholder='Free report will be sent to this email'
-                onChange={this.handleOnChange}
               />
             </FormGroup>
             <FormGroup>
@@ -107,11 +116,12 @@ class WebsiteAnalysisForm extends React.Component {
                 <b>Name</b>
               </Label>
               <Input
+                onChange={this.handleOnChange}
                 type='name'
                 name='name'
                 id='name'
                 placeholder='Enter Name'
-                onChange={this.handleOnChange}
+                value={this.state.name}
               />
             </FormGroup>
             <FormGroup>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from 'reactstrap';
 
 class MarketingEfforts extends Component {
@@ -51,9 +52,11 @@ class MarketingEfforts extends Component {
               Our writers are highly-skilled <br />
               communicators and persuaders
             </p>
-            <Button color='danger' size='sm'>
-              Learn More About Content Writing >
-            </Button>
+            <Link to='/content-writing'>
+              <Button color='danger' size='sm'>
+                Learn More About Content Writing >
+              </Button>
+            </Link>
           </div>
           <div>
             <img src='/pictures/web-design.png' alt='Web Design Icon' />

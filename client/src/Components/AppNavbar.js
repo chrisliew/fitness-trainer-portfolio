@@ -1,14 +1,15 @@
-import React from "react";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 class AppNavbar extends React.Component {
   render() {
     return (
-      <div className="app-navbar">
+      <div className='app-navbar'>
         <div>Marketing Solutions</div>
         <div>Our Work</div>
-        <div>Growth Tips</div>
-        <div>About Us</div>
-        <div>Contact Us</div>
+        <Link to='/growth-tips'>Growth Tips</Link>
+        <Link to='/about'>About Us</Link>
+        <Link to='/contact-us'>Contact Us</Link>
       </div>
     );
   }

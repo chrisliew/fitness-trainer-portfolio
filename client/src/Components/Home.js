@@ -1,19 +1,8 @@
 import React from 'react';
 import { Jumbotron, Container, Button } from 'reactstrap';
 import MarketingEfforts from './MarketingEfforts';
-
-const CallToActionButtons = props => {
-  return (
-    <div className='cta-buttons'>
-      <Button color='danger' sz='lg'>
-        Request An Appointment
-      </Button>
-      <Button color='danger' sz='lg'>
-        Free Website Analysis
-      </Button>
-    </div>
-  );
-};
+import AppNavbar from './AppNavbar';
+import TopBanner from './TopBanner';
 
 const ArticleLink = props => {
   return (
@@ -78,6 +67,8 @@ const HeroImage = props => {
 const Home = props => {
   return (
     <div>
+      <TopBanner introTitle='Lead Generation for Fitness Trainers' />
+      <AppNavbar />
       <HeroImage />
       <div className='marketing-efforts'>
         <div>We are experts at helping Fitness Trainers get more clients</div>
@@ -93,7 +84,6 @@ const Home = props => {
       <br />
       <MarketingAnalysis />
       <ArticleLink />
-      <CallToActionButtons />
     </div>
   );
 };

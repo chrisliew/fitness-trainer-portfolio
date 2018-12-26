@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Button } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 import WebsiteAnalysisForm from './WebsiteAnalysisForm';
 
@@ -14,8 +15,10 @@ class TopBanner extends Component {
           <WebsiteAnalysisForm buttonLabel='Free Website Analysis' />
         </div>
         <div className='title'>
-          <h2>Fitness Trainer Gains</h2>
-          <h6>Lead Generation for Fitness Trainers</h6>
+          <Link to='/' style={{ textDecoration: 'none' }}>
+            <h4>Fitness Trainer Gains</h4>
+          </Link>
+          <h6>{this.props.introTitle}</h6>
         </div>
       </div>
     );
