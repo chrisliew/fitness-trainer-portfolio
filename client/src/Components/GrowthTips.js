@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import AppNavbar from './AppNavbar';
 import TopBanner from './TopBanner';
 import { Jumbotron, Button } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 class GrowthTips extends Component {
   render() {
@@ -15,17 +16,17 @@ class GrowthTips extends Component {
           </Jumbotron>
           <div className='information-container'>
             <div className='article'>
-              <a href='/'>
+              <Link to='/growth-tips/7-lead-generation-tips'>
                 <img
                   src='/pictures/gym-office.jpg'
                   alt='lead generation office worker'
                 />
-              </a>
-              <a href='/'>
+              </Link>
+              <Link to='/growth-tips/7-lead-generation-tips'>
                 <h2 className='header'>
                   7 Lead Generation Tips for Fitness Trainer Websites
                 </h2>
-              </a>
+              </Link>
               <p>
                 How do you attract these new patients – especially in today's
                 world where website visitors have short attention spans and
@@ -33,17 +34,17 @@ class GrowthTips extends Component {
                 take to transform your fitness trainer website into a lead
                 generating magnet...
               </p>
-              <a href='/'>
+              <Link to='/growth-tips/7-lead-generation-tips'>
                 <Button className='float-left' outline color='danger'>
                   Read Article >
                 </Button>
-              </a>
+              </Link>
             </div>
             <div className='links'>
               <h3>Growth Tips</h3>
-              <a href='/'>
+              <Link to='/growth-tips/7-lead-generation-tips'>
                 7 Lead Generation Tips for Fitness Trainer Websites
-              </a>
+              </Link>
             </div>
           </div>
         </div>

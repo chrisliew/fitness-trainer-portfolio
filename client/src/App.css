@@ -45,14 +45,22 @@
 
 .marketing-efforts-cards {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-wrap: wrap;
+}
+
+.marketing-efforts-cards .me-card {
+  padding: 0 2em 0 2em;
 }
 
 .marketing-analysis {
   background-color: #30415d;
   padding: 4em 0em 0em 0em;
   color: white;
+}
+
+.marketing-analysis .title {
+  margin: 0;
 }
 
 .article-link {
@@ -455,6 +463,10 @@
 
 /* ***************************** CONTENT WRITING ********************************** */
 
+.content-writing {
+  color: #2c6276;
+}
+
 .content-writing-container .title {
   height: 17em;
   background-image: url('/pictures/content-writing-background.jpg');
@@ -463,4 +475,232 @@
 .content-writing-container .title h2 {
   color: #2c6276;
   margin-top: 1em;
+}
+
+.content-writing-container .description {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  max-width: 60em;
+}
+
+.content-writing-container .description .text {
+  text-align: left;
+  padding: 0 0 1em 4em;
+  width: 20em;
+}
+
+.content-writing-container .description-2 {
+  display: flex;
+  flex-direction: row;
+  max-width: 60em;
+}
+
+.content-writing-container .description-2 .text {
+  text-align: left;
+  padding: 0 0 1em 3em;
+  width: 20em;
+}
+
+.content-writing-container .container {
+  margin-bottom: 1em;
+}
+
+/* ***************************** NO WEBSITE CTA ********************************** */
+
+.no-website-form form {
+  display: flex;
+  flex-direction: column;
+  margin: 1em 0 7em 0;
+}
+
+.no-website-form form input {
+  align-self: center;
+  height: 2.5em;
+  margin: 0.5em;
+  width: 18em;
+  padding: 10px;
+}
+
+.no-website-form form .submit-form {
+  align-self: center;
+  height: 2.5em;
+  width: 7em;
+  padding: 10px;
+  background-color: #2c6276;
+  color: white;
+  font-size: 1.1em;
+}
+
+.no-website-CTA .parent {
+  display: flex;
+  margin-top: 5em;
+}
+
+.no-website-CTA .child-1 {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-left: 15em;
+}
+
+.no-website-CTA .child-2 {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-right: 15em;
+}
+
+.no-website-CTA .free-analysis-button {
+  align-self: center;
+  height: 2.5em;
+  width: 15em;
+  padding: 10px;
+  background-color: #2c6276;
+  color: white;
+  font-size: 1.1em;
+}
+
+.no-website-CTA .statement {
+  background: linear-gradient(to bottom right, #ffff7a, #ffd800);
+  height: 15em;
+  margin-bottom: 0;
+}
+
+/* ***************************** 7 LEAD GEN TIPS ********************************** */
+
+.seven-lead-generation-tips {
+  margin: auto;
+  max-width: 40em;
+  color: #4a4a4a;
+}
+
+.seven-lead-generation-tips div {
+  margin-top: 1.5em;
+}
+
+.seven-lead-generation-tips .main-image {
+  max-width: 100%;
+}
+
+.seven-lead-generation-tips .last-updated {
+  text-align: left;
+  margin-left: 4em;
+  font-size: 0.8em;
+}
+
+.seven-lead-generation-tips .last-updated span {
+  margin: 3px;
+}
+
+.seven-lead-generation-tips .intro {
+  text-align: left;
+  margin-left: 2em;
+  margin-right: 2em;
+  max-width: 50em;
+  font-weight: 500;
+}
+
+.seven-lead-generation-tips .text {
+  text-align: left;
+  margin-left: 2em;
+  margin-right: 2em;
+  max-width: 50em;
+  font-weight: 500;
+}
+
+/* ***************************** MARKETING SOLUTIONS ********************************** */
+.marketing-solutions {
+  color: #2c6276;
+}
+
+.marketing-solutions .header {
+  margin: 2em 0 2em 0;
+}
+
+.marketing-solutions .scenarios {
+  width: 40em;
+  margin: auto;
+  margin-top: 3em;
+}
+
+.marketing-solutions .statement {
+  height: 15em;
+  margin-bottom: 0;
+}
+
+/* ***************************** CONTENT WRITING ********************************** */
+
+.online-advertising {
+  color: #2c6276;
+}
+
+.online-advertising .text {
+  max-width: 50em;
+  margin: auto;
+}
+
+.online-advertising-container .title {
+  height: 17em;
+  background-image: url('/pictures/online-ads-background.jpg');
+}
+
+.online-advertising-container .title h1 {
+  color: #2c6276;
+  margin-top: 1em;
+}
+
+.online-advertising-container .title {
+  margin-bottom: 3em;
+}
+
+.online-advertising-container .online-advertising-graphic {
+  margin-bottom: 4em;
+  max-width: 100%;
+}
+
+.online-advertising-container .online-advertisements-explained {
+  margin: 2em 0 2em 0;
+}
+
+/* ***************************** OUR WORK ********************************** */
+.our-work h2 {
+  margin: 2em 0 2em 0;
+}
+
+.our-work-container {
+  max-width: 50em;
+  margin: auto;
+}
+
+.our-work img {
+  width: 20em;
+  height: 15em;
+}
+
+.our-work .website-example-container {
+  margin-top: 3em;
+  display: flex;
+  justify-content: center;
+}
+
+.our-work .website-example-container .description {
+  width: 20em;
+  margin-top: 1em;
+  margin-left: 2em;
+  text-align: left;
+}
+
+.our-work hr {
+  width: 50em;
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+.our-work .statement {
+  height: 8em;
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

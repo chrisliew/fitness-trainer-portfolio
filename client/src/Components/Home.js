@@ -1,6 +1,8 @@
 import React from 'react';
 import { Jumbotron, Container, Button } from 'reactstrap';
 import MarketingEfforts from './MarketingEfforts';
+import MarketingAnalysis from './MarketingAnalysis';
+
 import AppNavbar from './AppNavbar';
 import TopBanner from './TopBanner';
 
@@ -29,24 +31,6 @@ const ArticleLink = props => {
       <Button outline color='danger'>
         Read Article >
       </Button>
-      <br />
-    </div>
-  );
-};
-
-const MarketingAnalysis = props => {
-  return (
-    <div className='marketing-analysis'>
-      <h2>Get A Free Marketing Analysis Of Your Website</h2>
-      <div>
-        Our team will go through your website and give you actionable advice to
-        get more clients
-      </div>
-      <br />
-      <Button color='danger' sz='lg'>
-        Free Website Analysis
-      </Button>
-      <br />
       <br />
     </div>
   );

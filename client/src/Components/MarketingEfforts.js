@@ -7,7 +7,7 @@ class MarketingEfforts extends Component {
     return (
       <div>
         <div className='marketing-efforts-cards'>
-          <div>
+          <div className='me-card'>
             <img src='/pictures/web-design.png' alt='Web Design Icon' />
             <h6>Websites That Work</h6>
             <p>
@@ -18,18 +18,20 @@ class MarketingEfforts extends Component {
               Learn More About Web Design >
             </Button>
           </div>
-          <div>
+          <div className='me-card'>
             <img src='/pictures/web-design.png' alt='Web Design Icon' />
             <h6>AdWords (PPC)</h6>
             <p>
               We've managed over $1,300,000 <br />
               in campaigns for the best results
             </p>
-            <Button color='danger' size='sm'>
-              Learn More About Adwords>
-            </Button>
+            <Link to='adwords'>
+              <Button color='danger' size='sm'>
+                Learn More About Adwords>
+              </Button>
+            </Link>
           </div>
-          <div>
+          <div className='me-card'>
             <img src='/pictures/web-design.png' alt='Web Design Icon' />
             <h6>SEO</h6>
             <p>
@@ -45,7 +47,7 @@ class MarketingEfforts extends Component {
         <br />
 
         <div className='marketing-efforts-cards'>
-          <div>
+          <div className='me-card'>
             <img src='/pictures/web-design.png' alt='Web Design Icon' />
             <h6>Content Writing</h6>
             <p>
@@ -58,18 +60,20 @@ class MarketingEfforts extends Component {
               </Button>
             </Link>
           </div>
-          <div>
+          <div className='me-card'>
             <img src='/pictures/web-design.png' alt='Web Design Icon' />
             <h6>Online Advertisements</h6>
             <p>
               Target the right person with the <br />
               right message at the right time
             </p>
-            <Button color='danger' size='sm'>
-              Learn More About Online Advertising >
-            </Button>
+            <Link to='/online-advertising'>
+              <Button color='danger' size='sm'>
+                Learn More About Online Advertising >
+              </Button>
+            </Link>
           </div>
-          <div>
+          <div className='me-card'>
             <img src='/pictures/web-design.png' alt='Web Design Icon' />
             <h6>Social Media</h6>
             <p>
