@@ -10,8 +10,10 @@ import CallToActionButtons from './Components/CallToActionButtons';
 import ContentWriting from './Components/ContentWriting';
 import MarketingSolutions from './Components/MarketingSolutions';
 import OnlineAdvertising from './Components/OnlineAdvertising';
-import Adwords from './Components/Adwords';
 import OurWork from './Components/OurWork';
+import Adwords from './Components/Adwords';
+import Pricing from './Components/Pricing';
+import ScrollToTop from './Components/ScrollToTop';
 
 import Footer from './Components/Footer.js';
 
@@ -21,30 +23,33 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div className='App'>
-          <Switch>
-            <Route exact path='/' component={Home} />
-            <Route exact path='/about' component={About} />
-            <Route exact path='/growth-tips' component={GrowthTips} />
-            <Route path='/growth-tips/:id' component={GrowthTipsArticles} />
-            <Route exact path='/contact-us' component={ContactUs} />
-            <Route exact path='/content-writing' component={ContentWriting} />
-            <Route exact path='/adwords' component={Adwords} />
-            <Route
-              exact
-              path='/marketing-solutions'
-              component={MarketingSolutions}
-            />
-            <Route
-              exact
-              path='/online-advertising'
-              component={OnlineAdvertising}
-            />
-            <Route exact path='/our-work' component={OurWork} />
-          </Switch>
-          <CallToActionButtons />
-          <Footer />
-        </div>
+        <ScrollToTop>
+          <div className='App'>
+            <Switch>
+              <Route exact path='/' component={Home} />
+              <Route exact path='/about' component={About} />
+              <Route exact path='/growth-tips' component={GrowthTips} />
+              <Route path='/growth-tips/:id' component={GrowthTipsArticles} />
+              <Route exact path='/contact-us' component={ContactUs} />
+              <Route exact path='/content-writing' component={ContentWriting} />
+              <Route exact path='/adwords' component={Adwords} />
+              <Route
+                exact
+                path='/marketing-solutions'
+                component={MarketingSolutions}
+              />
+              <Route
+                exact
+                path='/online-advertising'
+                component={OnlineAdvertising}
+              />
+              <Route exact path='/our-work' component={OurWork} />
+              <Route exact path='/pricing' component={Pricing} />
+            </Switch>
+            <CallToActionButtons />
+            <Footer />
+          </div>
+        </ScrollToTop>
       </Router>
     );
   }

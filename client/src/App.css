@@ -506,6 +506,10 @@
   margin-bottom: 1em;
 }
 
+.content-writing img {
+  max-width: 100%;
+}
+
 /* ***************************** NO WEBSITE CTA ********************************** */
 
 .no-website-form form {
@@ -535,6 +539,7 @@
 .no-website-CTA .parent {
   display: flex;
   margin-top: 5em;
+  justify-content: center;
 }
 
 .no-website-CTA .child-1 {
@@ -703,4 +708,188 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* ***************************** MORE CLIENTS STATEMENT ********************************** */
+
+.more-clients-statement .no-background {
+  height: 8em;
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ********************************* ADWORDS ********************************** */
+
+.adwords-marketing {
+  color: #2c6276;
+}
+
+.adwords-marketing .title {
+  height: 17em;
+  background-image: url('/pictures/ppc-background.jpg');
+}
+
+.adwords-marketing .title h1 {
+  margin-top: 1em;
+}
+
+.adwords-marketing .intro {
+  max-width: 45em;
+  margin: auto;
+  margin-bottom: 5em;
+}
+
+.adwords-marketing .description-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.adwords-marketing .description {
+  max-width: 23em;
+  text-align: left;
+  margin-top: 1em;
+  margin-left: 2em;
+}
+
+.adwords-marketing-container .description {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  max-width: 60em;
+}
+
+.adwords-marketing-container .description .text {
+  text-align: left;
+  padding: 0 0 1em 4em;
+  width: 20em;
+}
+
+.adwords-marketing-container .description-2 {
+  display: flex;
+  flex-direction: row;
+  max-width: 60em;
+}
+
+.adwords-marketing-container .description-2 .text {
+  text-align: left;
+  padding: 0 0 1em 3em;
+  width: 20em;
+}
+
+.adwords-marketing-container .container {
+  margin-bottom: 1em;
+}
+
+/* ********************************* ADWORDS ********************************** */
+
+.pricing {
+  color: #2c6276;
+}
+
+.pricing .title {
+  height: 17em;
+  background-image: url('/pictures/pricing-background.jpg');
+}
+
+.pricing .title h1 {
+  margin-top: 1em;
+}
+
+.pricing .intro {
+  max-width: 45em;
+  margin: auto;
+  margin-bottom: 5em;
+}
+
+.pricing .description-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.pricing-container .description {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  max-width: 60em;
+}
+
+.pricing-container .description .text {
+  text-align: left;
+  padding: 0 0 1em 4em;
+  width: 20em;
+}
+
+.pricing-container .description-2 {
+  display: flex;
+  flex-direction: row;
+  max-width: 60em;
+}
+
+.pricing-container .description-2 .text {
+  text-align: left;
+  padding: 0 0 1em 3em;
+  width: 20em;
+}
+
+.pricing-container .container {
+  margin-bottom: 1em;
+}
+
+.fa-check {
+  color: green;
+  padding-right: 0.5em;
+  padding-top: 0.5em;
+}
+
+.pricing .standard,
+.pricing .premium {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 2em;
+  max-width: 30em;
+}
+
+.pricing .premium {
+  margin-top: 4em;
+}
+
+.pricing .description {
+  max-width: 25em;
+  text-align: left;
+  margin-top: 1em;
+  margin-left: 2em;
+}
+
+.pricing .features {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.faq {
+  padding: 3em 0 3em 0;
+  background-color: lightgrey;
+}
+
+.faq h4 {
+  margin-bottom: 2em;
+}
+
+.faq .questions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 55em;
+  margin: auto;
+}
+
+.faq .questions .question {
+  max-width: 23em;
+  margin: 1.5em;
 }
