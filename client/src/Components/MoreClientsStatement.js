@@ -1,9 +1,9 @@
 import React from 'react';
 
-function MoreClientsStatementNB() {
+const MoreClientsStatement = () => {
   return (
     <div className='more-clients-statement'>
-      <div className='no-background'>
+      <div className='with-background'>
         <p>
           We focus on getting you more clients,
           <br />
@@ -12,6 +12,6 @@ function MoreClientsStatementNB() {
       </div>
     </div>
   );
-}
+};
 
-export default MoreClientsStatementNB;
+export default MoreClientsStatement;

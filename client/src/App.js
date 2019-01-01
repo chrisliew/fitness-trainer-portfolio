@@ -13,8 +13,11 @@ import OnlineAdvertising from './Components/OnlineAdvertising';
 import OurWork from './Components/OurWork';
 import Adwords from './Components/Adwords';
 import Pricing from './Components/Pricing';
+import Privacy from './Components/Privacy';
 import ScrollToTop from './Components/ScrollToTop';
-
+import SEO from './Components/SEO';
+import SocialMedia from './Components/SocialMedia';
+import TermsAndConditions from './Components/TermsAndConditions';
 import Footer from './Components/Footer.js';
 
 import './App.css';
@@ -45,6 +48,14 @@ class App extends Component {
               />
               <Route exact path='/our-work' component={OurWork} />
               <Route exact path='/pricing' component={Pricing} />
+              <Route exact path='/privacy' component={Privacy} />
+              <Route exact path='/seo' component={SEO} />
+              <Route exact path='/social-media' component={SocialMedia} />
+              <Route
+                exact
+                path='/terms-and-conditions'
+                component={TermsAndConditions}
+              />
             </Switch>
             <CallToActionButtons />
             <Footer />

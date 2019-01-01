@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Jumbotron } from 'reactstrap';
+import { withAlert } from 'react-alert';
 
 class NoWebsiteForm extends Component {
   constructor(props) {
@@ -19,7 +20,8 @@ class NoWebsiteForm extends Component {
     });
   };
 
-  handleOnSubmit = () => {
+  handleOnSubmit = event => {
+    event.preventDefault();
     const clientInfo = {
       noWebsiteName: this.state.noWebsiteName,
       noWebsiteEmail: this.state.noWebsiteEmail,
@@ -38,8 +40,18 @@ class NoWebsiteForm extends Component {
       noWebsiteNumber: '',
       city: ''
     });
-    alert(
-      'Thanks For submitting your info, someone from FitnessTrainerGains will be in touch.'
+
+    this.props.alert.show(
+      'Thank you for submitting your contact info.  An expert at Fitness Trainer Gains will contact you shortly.',
+      {
+        type: 'success',
+        onOpen: () => {
+          console.log('successfully sent email');
+        }, // callback that will be executed after this alert open
+        onClose: () => {
+          console.log('closed');
+        } // callback that will be executed after this alert is removed
+      }
     );
   };
 
@@ -95,7 +107,7 @@ class NoWebsiteCTA extends Component {
           <div className='child-1'>
             <b>If you don't have a website,</b> complete this short form and we
             will get back to you:
-            <NoWebsiteForm />
+            <NoWebsiteForm alert={this.props.alert} />
           </div>
           <div className='child-2'>
             <b>If you have a website,</b> get a free marketing analysis worth
@@ -120,4 +132,4 @@ class NoWebsiteCTA extends Component {
   }
 }
 
-export default NoWebsiteCTA;
+export default withAlert(NoWebsiteCTA);

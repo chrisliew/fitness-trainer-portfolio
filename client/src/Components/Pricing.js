@@ -4,6 +4,7 @@ import TopBanner from './TopBanner';
 import PricingForm from './PricingForm';
 import { Jumbotron } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import MoreClientsStatement from './MoreClientsStatement';
 
 const FAQ = () => {
   return (
@@ -13,35 +14,44 @@ const FAQ = () => {
         <div className='question'>
           <p>
             <b>How long is the contract?</b>
-            <br/>
-            The <i>Standard</i> option is month-to-month and the <i>Premium</i> option is for 12 months as it includes a conversion-centered website.
+            <br />
+            The <i>Standard</i> option is month-to-month and the <i>Premium</i>{' '}
+            option is for 12 months as it includes a conversion-centered
+            website.
           </p>
         </div>
         <div className='question'>
           <p>
             <b>What if I just want a website?</b>
-            <br/>
-            Contact us and we can assist you with this. Remember, a website without targeted traffic is as good as a business without customers.
+            <br />
+            Contact us and we can assist you with this. Remember, a website
+            without targeted traffic is as good as a business without customers.
           </p>
         </div>
         <div className='question'>
           <p>
             <b>What if I have a higher budget?</b>
-            <br/>
-            Contact us to discuss a custom plan that works for your business to see better results.
+            <br />
+            Contact us to discuss a custom plan that works for your business to
+            see better results.
           </p>
         </div>
         <div className='question'>
           <p>
             <b>Do you have any cheaper options?</b>
-            <br/>
-            Not at this moment. We are dedicated to growing your fitness trainer business and this is the smallest budget needed to see long-term growth.
+            <br />
+            Not at this moment. We are dedicated to growing your fitness trainer
+            business and this is the smallest budget needed to see long-term
+            growth.
           </p>
         </div>
         <p>
-          Have any additional questions? <Link to='contact-us'><i>Contact Us</i></Link>
-        <br/>
-        <br/>
+          Have any additional questions?{' '}
+          <Link to='contact-us'>
+            <i>Contact Us</i>
+          </Link>
+          <br />
+          <br />
           <i>(All figures in USD)</i>
         </p>
       </div>
@@ -148,8 +158,12 @@ class Pricing extends Component {
             <Premium />
           </div>
           <FAQ />
-          Select the option you are interested in below and we will get back to you:
-          <PricingForm />
+          <div className='pricing-form'>
+            Select the option you are interested in below and we will get back
+            to you:
+            <PricingForm />
+            <MoreClientsStatement />
+          </div>
         </div>
       </div>
     );

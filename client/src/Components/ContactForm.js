@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { withAlert } from 'react-alert';
 
 class ContactForm extends Component {
   constructor(props) {
@@ -18,7 +19,8 @@ class ContactForm extends Component {
     });
   };
 
-  handleOnSubmit = () => {
+  handleOnSubmit = event => {
+    event.preventDefault();
     const clientInfo = {
       contactName: this.state.contactName,
       contactEmail: this.state.contactEmail,
@@ -37,8 +39,18 @@ class ContactForm extends Component {
       contactNumber: '',
       message: ''
     });
-    alert(
-      'Thanks For submitting your info, someone from FitnessTrainerGains will be in touch.'
+
+    this.props.alert.show(
+      'Thank you for submitting your contact info.  An expert at Fitness Trainer Gains will contact you shortly.',
+      {
+        type: 'success',
+        onOpen: () => {
+          console.log('successfully sent email');
+        }, // callback that will be executed after this alert open
+        onClose: () => {
+          console.log('closed');
+        } // callback that will be executed after this alert is removed
+      }
     );
   };
 
@@ -87,4 +99,4 @@ class ContactForm extends Component {
   }
 }
 
-export default ContactForm;
+export default withAlert(ContactForm);

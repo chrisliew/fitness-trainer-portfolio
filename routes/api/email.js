@@ -39,4 +39,35 @@ module.exports = app => {
     };
     sgMail.send(msg);
   });
+
+  app.post('/api/email/noWebsite', (req, res) => {
+    const msg = {
+      to: 'chriswvliew@gmail.com',
+      from: req.body.noWebsiteEmail,
+      subject: 'No Website Form for Fitnesstrainergains.com Received',
+      html: `
+        <div>Name: ${req.body.noWebsiteName}</div>
+        <div>Email: ${req.body.noWebsiteEmail}</div>
+        <div>Number: ${req.body.noWebsiteNumber}</div>
+        <div>City: ${req.body.city}</div>
+      `
+    };
+    sgMail.send(msg);
+  });
+
+  app.post('/api/email/pricing', (req, res) => {
+    const msg = {
+      to: 'chriswvliew@gmail.com',
+      from: req.body.pricingEmail,
+      subject: 'Pricing Form for Fitnesstrainergains.com Received',
+      html: `
+        <div>Pricing Type: ${req.body.pricing}</div>
+        <div>Name: ${req.body.pricingName}</div>
+        <div>Email: ${req.body.pricingEmail}</div>
+        <div>Number: ${req.body.pricingNumber}</div>
+        <div>City: ${req.body.city}</div>
+      `
+    };
+    sgMail.send(msg);
+  });
 };

@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { withAlert } from 'react-alert';
 
 class PricingForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      noWebsiteName: '',
-      noWebsiteEmail: '',
-      noWebsiteNumber: '',
+      pricing: 'Standard',
+      pricingName: '',
+      pricingEmail: '',
+      pricingNumber: '',
       city: ''
     };
   }
@@ -18,27 +20,39 @@ class PricingForm extends Component {
     });
   };
 
-  handleOnSubmit = () => {
+  handleOnSubmit = event => {
+    event.preventDefault();
     const clientInfo = {
-      noWebsiteName: this.state.noWebsiteName,
-      noWebsiteEmail: this.state.noWebsiteEmail,
-      noWebsiteNumber: this.state.noWebsiteNumber,
+      pricing: this.state.pricing,
+      pricingName: this.state.pricingName,
+      pricingEmail: this.state.pricingEmail,
+      pricingNumber: this.state.pricingNumber,
       city: this.state.city
     };
     axios
-      .post('/api/email/noWebsite', clientInfo)
-      .then(console.log('Sent email with No Website Info'))
+      .post('/api/email/pricing', clientInfo)
+      .then(console.log('Sent email with Pricing Info'))
       .catch(error => {
         return error;
       });
     this.setState({
-      noWebsiteName: '',
-      noWebsiteEmail: '',
-      noWebsiteNumber: '',
+      pricing: '',
+      pricingName: '',
+      pricingEmail: '',
+      pricingNumber: '',
       city: ''
     });
-    alert(
-      'Thanks For submitting your info, someone from FitnessTrainerGains will be in touch.'
+    this.props.alert.show(
+      'Thank you for submitting your contact info.  An expert at Fitness Trainer Gains will contact you shortly.',
+      {
+        type: 'success',
+        onOpen: () => {
+          console.log('successfully sent email');
+        }, // callback that will be executed after this alert open
+        onClose: () => {
+          console.log('closed');
+        } // callback that will be executed after this alert is removed
+      }
     );
   };
 
@@ -46,21 +60,25 @@ class PricingForm extends Component {
     return (
       <div className='no-website-form'>
         <form onSubmit={this.handleOnSubmit}>
+          <select onChange={this.handleOnChange} name='pricing' title='pricing'>
+            <option value='Standard'>Standard</option>
+            <option value='Premium'>Premium</option>
+          </select>
           <input
             onChange={this.handleOnChange}
-            name='noWebsiteName'
+            name='pricingName'
             title='name'
             placeholder='Name'
           />
           <input
             onChange={this.handleOnChange}
-            name='noWebsiteEmail'
+            name='pricingEmail'
             title='email'
             placeholder='Email'
           />
           <input
             onChange={this.handleOnChange}
-            name='noWebsiteNumber'
+            name='pricingNumber'
             title='number'
             placeholder='Contact Number'
           />
@@ -86,4 +104,4 @@ class PricingForm extends Component {
   }
 }
 
-export default PricingForm;
+export default withAlert(PricingForm);

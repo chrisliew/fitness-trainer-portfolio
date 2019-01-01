@@ -10,6 +10,7 @@ import {
   Input
 } from 'reactstrap';
 import axios from 'axios';
+import { withAlert } from 'react-alert';
 
 class WebsiteAnalysisForm extends React.Component {
   constructor(props) {
@@ -42,7 +43,8 @@ class WebsiteAnalysisForm extends React.Component {
     });
   };
 
-  handleOnSubmit = () => {
+  handleOnSubmit = event => {
+    event.preventDefault();
     const clientInfo = {
       name: this.state.name,
       email: this.state.email,
@@ -55,8 +57,17 @@ class WebsiteAnalysisForm extends React.Component {
       .catch(error => {
         return error;
       });
-    alert(
-      'Thanks For submitting your info, someone from FitnessTrainerGains will be in touch.'
+    this.props.alert.show(
+      'Thank you for submitting your contact info.  An expert at Fitness Trainer Gains will contact you shortly.',
+      {
+        type: 'success',
+        onOpen: () => {
+          console.log('successfully sent email');
+        }, // callback that will be executed after this alert open
+        onClose: () => {
+          console.log('closed');
+        } // callback that will be executed after this alert is removed
+      }
     );
   };
 
@@ -155,4 +166,4 @@ class WebsiteAnalysisForm extends React.Component {
   }
 }
 
-export default WebsiteAnalysisForm;
+export default withAlert(WebsiteAnalysisForm);

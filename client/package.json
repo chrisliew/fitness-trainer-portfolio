@@ -8,6 +8,8 @@
     "font-awesome": "^4.7.0",
     "http-proxy-middleware": "^0.19.1",
     "react": "^16.6.3",
+    "react-alert": "^4.0.4",
+    "react-alert-template-basic": "^1.0.0",
     "react-dom": "^16.6.3",
     "react-form-validator-core": "^0.5.1",
     "react-router-dom": "^4.3.1",
