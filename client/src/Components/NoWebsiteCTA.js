@@ -110,10 +110,10 @@ class NoWebsiteCTA extends Component {
             <NoWebsiteForm alert={this.props.alert} />
           </div>
           <div className='child-2'>
-            <b>If you have a website,</b> get a free marketing analysis worth
-            $399 (<i>done by people - not software</i>):
-            <br />
-            <br />
+            <p>
+              <b>If you have a website,</b> get a free marketing analysis worth
+              $399 <i>(done by people - not software)</i>:
+            </p>
             <button className='free-analysis-button'>
               Get My Free Website Analysis
             </button>

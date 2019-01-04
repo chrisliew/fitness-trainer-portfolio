@@ -50,13 +50,15 @@ const HeroImage = props => {
 
 const Home = props => {
   return (
-    <div>
+    <div className='home'>
       <TopBanner introTitle='Lead Generation for Fitness Trainers' />
       <AppNavbar />
       <HeroImage />
       <div className='marketing-efforts'>
-        <div>We are experts at helping Fitness Trainers get more clients</div>
-        <div>through the following marketing efforts:</div>
+        <p>
+          We are experts at helping Fitness Trainers get more clients through
+          the following marketing efforts:
+        </p>
       </div>
       <MarketingEfforts />
       <h3>

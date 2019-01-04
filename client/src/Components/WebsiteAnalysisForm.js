@@ -74,9 +74,9 @@ class WebsiteAnalysisForm extends React.Component {
   render() {
     return (
       <div className='website-analysis-form-container'>
-        <Button color='danger' onClick={this.toggle}>
+        <button color='danger' onClick={this.toggle} size='sm'>
           {this.props.buttonLabel}
-        </Button>
+        </button>
         <Modal
           isOpen={this.state.modal}
           toggle={this.toggle}

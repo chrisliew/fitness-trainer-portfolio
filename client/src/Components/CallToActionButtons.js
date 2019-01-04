@@ -1,15 +1,14 @@
 import React from 'react';
-import { Button } from 'reactstrap';
+import { Link } from 'react-router-dom';
+import WebsiteAnalysisForm from './WebsiteAnalysisForm';
 
 const CallToActionButtons = props => {
   return (
     <div className='cta-buttons'>
-      <Button color='danger' sz='lg'>
-        Request An Appointment
-      </Button>
-      <Button color='danger' sz='lg'>
-        Free Website Analysis
-      </Button>
+      <Link to='contact-us'>
+        <button>Request An Appointment</button>
+      </Link>
+      <WebsiteAnalysisForm buttonLabel='Free Website Analysis' />
     </div>
   );
 };

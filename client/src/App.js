@@ -18,6 +18,7 @@ import ScrollToTop from './Components/ScrollToTop';
 import SEO from './Components/SEO';
 import SocialMedia from './Components/SocialMedia';
 import TermsAndConditions from './Components/TermsAndConditions';
+import WebDesign from './Components/WebDesign';
 import Footer from './Components/Footer.js';
 
 import './App.css';
@@ -51,6 +52,7 @@ class App extends Component {
               <Route exact path='/privacy' component={Privacy} />
               <Route exact path='/seo' component={SEO} />
               <Route exact path='/social-media' component={SocialMedia} />
+              <Route exact path='/web-design' component={WebDesign} />
               <Route
                 exact
                 path='/terms-and-conditions'

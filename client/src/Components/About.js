@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import AppNavbar from './AppNavbar';
 import TopBanner from './TopBanner';
+import MoreClientsStatementNB from './MoreClientsStatementNB';
 
 class About extends Component {
   render() {
@@ -12,9 +14,9 @@ class About extends Component {
           <h2>About Us</h2>
           <br />
           <p>
-            Fitness Trainer Gains is a digital marketing agency dedicated to
-            growing Fitness Trainer Businesses. We are focused on results and we
-            are as passionate as you are about growing your business.
+            <b>Fitness Trainer Gains</b> is a digital marketing agency dedicated
+            to growing Fitness Trainer Businesses. We are focused on results and
+            we are as passionate as you are about growing your business.
           </p>
           <p>
             Our team has over 20 years worth of combined experience helping
@@ -27,14 +29,11 @@ class About extends Component {
           <br />
           <p>
             If you have any further questions, please don't hesitate in
-            contacting us.
+            <Link to='/contact-us'> contacting us.</Link>
           </p>
           <br />
-          <h3>
-            We focus on getting you more clients, while you focus on running
-            your business.
-          </h3>
         </div>
+        <MoreClientsStatementNB />
       </div>
     );
   }

@@ -10,7 +10,7 @@ class OurWork extends Component {
       <div className='our-work'>
         <TopBanner introTitle='Growth Tips for Fitness Trainers' />
         <AppNavbar />
-        <h2>Our Work for Fitness Trainers</h2>
+        <h3>Our Work for Fitness Trainers</h3>
         <div className='our-work-container'>
           <p>
             Finding the right marketing agency is not easy... there are so many

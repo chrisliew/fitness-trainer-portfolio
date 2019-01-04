@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import AppNavbar from './AppNavbar';
 import TopBanner from './TopBanner';
 
-//map over articles, if matches the params.id then render it.
-
 const SevenLeadGenerationTips = () => {
   return (
     <div className='seven-lead-generation-tips'>

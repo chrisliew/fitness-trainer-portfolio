@@ -1,32 +1,38 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class Footer extends Component {
   render() {
     return (
-      <div>
+      <div className='footer'>
         <footer className='footer-distributed'>
           <div className='footer-left'>
             <h3>
-              Fitness Trainer Gains
-              <span>
-                <i className='fas fa-dumbbell' />
-              </span>
+              <Link to='/'>
+                <span>
+                  Fitness Trainer Gains <i className='fas fa-dumbbell' />
+                </span>
+              </Link>
             </h3>
             <p className='footer-links'>
-              <a href='/'>Home</a>·<a href='/'>Pricing</a>·<a href='/'>Faq</a>·
-              <a href='/'>Contact</a>
+              <Link to='/marketing-solutions'>Marketing Solutions</Link>·
+              <Link to='/our-work'>Our Work</Link>·
+              <Link to='/growth-tips'>Growth Tips</Link>·
+              <Link to='/pricing'>Pricing</Link>·
+              <Link to='/about'>About Us</Link>·
+              <Link to='/contact-us'>Contact</Link>
             </p>
             <p className='footer-company-name'>
               Fitness Trainer Gains &copy; 2019
             </p>
           </div>
           <div className='footer-center'>
-            {/* <div>
+            <div>
               <i className='fa fa-map-marker' />
               <p>
                 <span>15 My Khe Street</span> Da Nang, Vietnam
               </p>
-            </div> */}
+            </div>
             <div>
               <i className='fa fa-phone' />
               <p>+1 555 123456</p>

@@ -66,6 +66,7 @@ class Adwords extends Component {
             </div>
           </div>
         </div>
+        <hr />
         <div className='adwords-marketing-container'>
           <br />
           <br />
@@ -177,7 +178,8 @@ class Adwords extends Component {
               </Col>
             </Row>
           </Container>
-          <br />
+
+          <hr />
           <br />
           <NoWebsiteCTA />
         </div>
