@@ -1,5 +1,5 @@
 const nodemailer = require('nodemailer');
-const keys = require('../../keys');
+const keys = require('../../config/keys');
 const sgMail = require('@sendgrid/mail');
 sgMail.setApiKey(keys.sendGridKey);
 
