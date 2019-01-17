@@ -450,7 +450,7 @@
 }
 
 .modal-header {
-  background-color: #33383b;
+  background-color: #0fc22d;
   color: white;
   width: 100%;
 }
@@ -516,6 +516,17 @@
   width: 13em;
   margin-right: 10em;
   font-weight: bold;
+}
+
+@media (max-width: 1024px) {
+  .growth-tips .information-container .links {
+    display: none;
+  }
+
+  .growth-tips .information-container .article {
+    margin-left: 2em;
+    margin-right: 2em;
+  }
 }
 
 .growth-tips .article a {
@@ -642,7 +653,7 @@
 
 .content-writing-container .description .text {
   text-align: left;
-  padding: 0 0 1em 4em;
+  padding: 0 0 1em 3em;
   width: 20em;
 }
 
@@ -951,7 +962,7 @@
 
 .adwords-marketing-container .description .text {
   text-align: left;
-  padding: 0 0 1em 4em;
+  padding: 0 0 1em 3em;
   width: 20em;
 }
 
@@ -1136,6 +1147,7 @@
 .seo .seo-picture {
   max-width: 40em;
   max-height: 100em;
+  width: 100%;
 }
 
 .seo .paragraph2 {
@@ -1170,7 +1182,7 @@
 
 .seo .description .text {
   text-align: left;
-  padding: 0 0 1em 4em;
+  padding: 0 0 1em 3em;
   width: 20em;
 }
 
